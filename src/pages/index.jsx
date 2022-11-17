@@ -13,7 +13,6 @@ import {
   LinkedInIcon,
   YouTubeIcon,
 } from '@/components/SocialIcons'
-import { generateRssFeed } from '@/lib/generateRssFeed'
 import dayjs from 'dayjs';
 import jwt from 'jsonwebtoken';
 
