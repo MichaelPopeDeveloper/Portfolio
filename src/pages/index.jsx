@@ -314,10 +314,6 @@ function subscribeNewsletter(e) {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
   const STRAPI_API = process.env.STRAPI_API;
 
   // Fetch data from external API
