@@ -12,7 +12,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'michael-pope-portfolio.herokuapp.com'],
   },
 }
 
