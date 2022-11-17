@@ -219,6 +219,16 @@ export default function Home({ articles, PageTitle, MainHeader, MainSubtext, Twi
           name="description"
           content={PageTitle}
         />
+        <meta property="og:url" content="https://michael-pope-frontend.com" />
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="your fb id" />
+        <meta property="og:title" content="Michael's Portfolio" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+            property="og:description"
+            content="Hurray!! Yes Social Media Preview is Working"
+        />
+        <meta property="og:image" content={Carousel?.[3]?.url} />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
