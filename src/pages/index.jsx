@@ -278,25 +278,10 @@ function subscribeNewsletter(e) {
   e.preventDefault();
   const email = e.target.email.value;
 
-  // Admin API key goes here
-  const key = '6361ecc8dc0a53003d04930d:e194a63c4903d573ef3d70d9ce9250a547f3ffe74d68987e8a74554aa1b9adbb';
-
-  // Split the key into ID and SECRET
-  const [id, secret] = key.split(':');
-
-  // Create the token (including decoding secret)
-  const token = jwt.sign({}, Buffer.from(secret, 'hex'), {
-    keyid: id,
-    algorithm: 'HS256',
-    expiresIn: '5m',
-    audience: `/admin/`
-  });
-
-  fetch('https://michael-pope-developer.ghost.io/ghost/api/admin/members', {
+  fetch(`/api/subscribeNewsletter`, {
     method: 'POST', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Ghost ${token}`
     },
     body: JSON.stringify({ members: [{ email }] }),
   })
