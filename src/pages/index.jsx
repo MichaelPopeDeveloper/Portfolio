@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/20/solid'
@@ -19,7 +19,9 @@ import {
 } from '@/components/SocialIcons'
 import dayjs from 'dayjs';
 import { motion } from "framer-motion"
-import { useEffect } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function Notification({ show, setShow }) {
 
@@ -288,15 +290,6 @@ export default function Home({ articles, PageTitle, MainHeader, MainSubtext, Twi
   useEffect(() => {
     console.log('showNotification', showNotification);
   }, [showNotification])
-
-  useEffect(() => {
-    if (showNotification) {
-      setTimeout(() => { 
-        setShowNotification(false);
-        setEmail(''); 
-      }, 5000);
-    }
-  }, [showNotification]);
   
   return (
     <>
@@ -356,8 +349,12 @@ export default function Home({ articles, PageTitle, MainHeader, MainSubtext, Twi
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter email={email} setEmail={setEmail} onSubscribe={() => { setShowNotification(true) }} />
+            <Newsletter email={email} setEmail={setEmail} onSubscribe={() => { 
+              setEmail('');
+              toast.success(`👋 Thanks for subscribing to my newsletter!`);
+             }} />
             <Resume Resume={JobHistory} />
+            <ToastContainer />
           </div>
         </div>
       </Container>
@@ -413,7 +410,7 @@ export async function getStaticProps() {
       YouTubeUrl,
       Resume: Resume.map((role) => ({
         ...role,
-        url: `${process.env.STRAPI_API}${role.Logo?.data?.attributes?.url}`,
+        url: `${role.Logo?.data?.attributes?.url}`,
       })),
       articles: ghostData?.posts
         .slice(0, 4)
@@ -421,7 +418,7 @@ export async function getStaticProps() {
       Carousel: Carousel.data?.map((image) => {
         console.log(image);
         return ({
-          url: `${process.env.STRAPI_API}${image.attributes.url}`,
+          url: `${image.attributes.url}`,
           width: image.attributes.width,
           height: image.attributes.height,
         })

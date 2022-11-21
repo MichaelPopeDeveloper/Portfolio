@@ -12,7 +12,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    domains: ['localhost', 'michael-pope-portfolio.herokuapp.com'],
+    domains: ['localhost', 'michael-pope-portfolio.herokuapp.com', `strapi-aws-s3-images-bucket-michael-pope.s3.us-west-1.amazonaws`],
   },
   rewrites: async () => [
       {

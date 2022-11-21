@@ -112,7 +112,7 @@ export async function getStaticProps() {
        Header,
        Main,
        Email,
-        Portrait: { url: `${process.env.STRAPI_API}${Portrait.data.attributes.url}`, width: Portrait.data.attributes.width, height: Portrait.data.attributes.height },
+        Portrait: { url: `${Portrait.data.attributes.url}`, width: Portrait.data.attributes.width, height: Portrait.data.attributes.height },
     },
   }
 }
