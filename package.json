@@ -15,6 +15,7 @@
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@headlessui/react": "^1.7.2",
+    "@heroicons/react": "^2.0.13",
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/loader": "^2.1.2",
     "@next/mdx": "^12.2.3",
@@ -24,6 +25,7 @@
     "fast-glob": "^3.2.11",
     "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
+    "framer-motion": "^7.6.7",
     "html-react-parser": "^3.0.4",
     "jsonwebtoken": "^8.5.1",
     "next": "^12.3.1",
