@@ -318,6 +318,8 @@ export async function getStaticProps() {
   const res = await fetch(`${STRAPI_API}/api/home-page?populate=Resume.Logo&populate=Avatar&populate=Resume.Logo&populate=Carousel`);
   const data = await res.json();
 
+  console.dir(data, { depth: null });
+
   const ghostRes = await fetch('https://michael-pope-developer.ghost.io/ghost/api/v3/content/posts?key=143c78f5906205a54bf79c23af');
   const ghostData = await ghostRes.json();
 
