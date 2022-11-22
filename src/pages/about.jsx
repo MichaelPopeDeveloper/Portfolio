@@ -37,7 +37,7 @@ function MailIcon(props) {
   )
 }
 
-export default function About({Header, Main, Email, Portrait}) {
+export default function About({ Header, Main, Email, Portrait, Twitter, Instagram, GitHub, LinkedIn  }) {
   return (
     <>
       <Head>
@@ -62,7 +62,7 @@ export default function About({Header, Main, Email, Portrait}) {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-             {Header}
+              {Header}
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               {parse(Main)}
@@ -70,16 +70,16 @@ export default function About({Header, Main, Email, Portrait}) {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink href={Twitter} icon={TwitterIcon}>
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink href={Instagram} icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <SocialLink href={GitHub} icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink href={LinkedIn} icon={LinkedInIcon} className="mt-4">
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
@@ -105,14 +105,18 @@ export async function getStaticProps() {
   const data = await res.json()
 
   console.dir(data, { depth: null });
-   const { Header, Main, Email, Portrait } = data.data.attributes;
+  const { Header, Main, Email, Portrait, Twitter, Instagram, GitHub, LinkedIn } = data.data.attributes;
 
   return {
     props: {
-       Header,
-       Main,
-       Email,
-        Portrait: { url: `${Portrait.data.attributes.url}`, width: Portrait.data.attributes.width, height: Portrait.data.attributes.height },
+      Header,
+      Main,
+      Email,
+      Portrait: { url: `${Portrait.data.attributes.url}`, width: Portrait.data.attributes.width, height: Portrait.data.attributes.height },
+      Twitter,
+      Instagram,
+      GitHub,
+      LinkedIn
     },
   }
 }
