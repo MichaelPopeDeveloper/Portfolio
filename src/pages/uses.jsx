@@ -29,7 +29,7 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>Uses - Spencer Sharp</title>
+        <title>Uses - Michael Pope</title>
         <meta
           name="description"
           content="Software I use, gadgets I love, and other things I recommend."
@@ -47,41 +47,38 @@ export default function Uses() {
               single time, even under the incredibly heavy loads I put it
               through with our various launch simulations.
             </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
-              The only display on the market if you want something HiDPI and
-              bigger than 27”. When you’re working at planetary scale, every
-              pixel you can get counts.
+            <Tool title="Basilisk X Hyperspeed">
+              Compact, wireless, and has a great scroll wheel. Workks great for work and gaming. Bluetooth compatible. I use it with my Mac and my computer.
             </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
+            {/* <Tool title="IBM Model M SSK Industrial Keyboard">
               They don’t make keyboards the way they used to. I buy these any
               time I see them go up for sale and keep them in storage in case I
               need parts or need to retire my main.
+            </Tool> */}
+            <Tool title="HP Omen Monitor">
+              Comes with a very nice stand and is a great secondary display for a computer/laptop.
             </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
-            </Tool>
-            <Tool title="Herman Miller Aeron Chair">
+            {/* <Tool title="Herman Miller Aeron Chair">
               If I’m going to slouch in the worst ergonomic position imaginable
               all day, I might as well do it in an expensive chair.
-            </Tool>
+            </Tool> */}
           </ToolsSection>
           <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+            <Tool title="Visual Studio Code">
+             My favorite IDE, it's free, open source, comes with a ton of extensions, and is cross-platform.
             </Tool>
-            <Tool title="iTerm2">
+            <Tool title="DataGrip">
+              My favorite database IDE, it comes with lots of tool that make handle databases a breeze.
+            </Tool>
+            {/* <Tool title="iTerm2">
               I’m honestly not even sure what features I get with this that
               aren’t just part of the macOS Terminal but it’s what I use.
-            </Tool>
-            <Tool title="TablePlus">
+            </Tool> */}
+            {/* <Tool title="TablePlus">
               Great software for working with databases. Has saved me from
               building about a thousand admin interfaces for my various projects
               over the years.
-            </Tool>
+            </Tool> */}
           </ToolsSection>
           <ToolsSection title="Design">
             <Tool title="Figma">
@@ -91,7 +88,7 @@ export default function Uses() {
             </Tool>
           </ToolsSection>
           <ToolsSection title="Productivity">
-            <Tool title="Alfred">
+            {/* <Tool title="Alfred">
               It’s not the newest kid on the block but it’s still the fastest.
               The Sublime Text of the application launcher world.
             </Tool>
@@ -106,7 +103,7 @@ export default function Uses() {
               Great tool for scheduling meetings while protecting my calendar
               and making sure I still have lots of time for deep work during the
               week.
-            </Tool>
+            </Tool> */}
             <Tool title="Focus">
               Simple tool for blocking distracting websites when I need to just
               do the work and get some momentum going.
