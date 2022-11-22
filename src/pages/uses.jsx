@@ -65,7 +65,7 @@ export default function Uses() {
           </ToolsSection>
           <ToolsSection title="Development tools">
             <Tool title="Visual Studio Code">
-             My favorite IDE, it's free, open source, comes with a ton of extensions, and is cross-platform.
+             My favorite IDE, it&apos;s free, open source, comes with a ton of extensions, and is cross-platform.
             </Tool>
             <Tool title="DataGrip">
               My favorite database IDE, it comes with lots of tool that make handle databases a breeze.
